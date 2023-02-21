@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+	<div class="border-top pt-3">
+		<small class="text-muted">
+			<h4>You have been logged out,
+				<a style="text-decoration: none;" class="ml-1" href="{% url 'users-signin'%}">Sign In</a>
+			</h4>
+		</small>
+	</div>
+{% endblock %}

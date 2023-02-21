@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<div class="content-section">
+		<form action='.' method="POST"> {% csrf_token %}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4 ">Join Us Today</legend>
+				{{ form|crispy }}
+
+<!-- 				<label for="">Username</label>
+				<input class="ml-2" type="text" name="Username">
+				<br>
+
+				<label for="">First Name</label>
+				<input class="ml-1" type="text" name="fname" required>
+				<br>
+
+				<label for="">Last Name</label>
+				<input class="ml-1" type="text" name="lname" required>
+				<br>
+				<label for="">Email</label>
+				<input class="ml-4" type="email" name="email" required>
+				<br>
+
+				<label for="">Password</label>
+				<input class="ml-2" type="password" name="pass1">
+				<br>
+
+				<label for="">Confirm Password</label>
+				<input class="ml-2" type="password" name="pass2"> -->
+
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit">Sign Up</button>
+			</div>
+		</form>
+		<div class="border-top pt-3">
+			<small class="text-muted">
+				Already Have An Account? <a class="ml-1" href="{% url 'users-signin'%}">Sign In</a>
+			</small>
+		</div>
+	</div>
+{% endblock %}
